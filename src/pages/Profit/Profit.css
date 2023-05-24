@@ -1,0 +1,699 @@
+.profit {
+  min-height: 100%;
+  background: #0e130f;
+  width: 100%;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profit.loss {
+  background: #130e0e;
+
+  .profit-container {
+    background: radial-gradient(
+        circle at 80% 50%,
+        rgba(95, 0, 0, 0.7) 0%,
+        rgba(12, 15, 12, 0) 100%
+      ),
+      #0f0c0c;
+  }
+  .profit-container_buttons {
+    border-bottom: 1px solid rgba(209, 35, 35, 0.3);
+  }
+  .profit-container_buttons-item {
+    border-right: 1px solid rgba(209, 35, 35, 0.3);
+  }
+  .profit-container_buttons-item.active {
+    background: rgba(161, 26, 26, 0.3);
+  }
+  .block {
+    border: 1px solid rgba(161, 26, 26, 0.3);
+  }
+  .block p:first-child {
+    color: #d12323;
+  }
+  .block input[type="text"]:first-child {
+    border-bottom: 1px solid #d12323;
+
+    color: #d12323;
+  }
+  .block input[type="text"]::-webkit-input-placeholder {
+    color: rgba(161, 26, 26, 0.3);
+  }
+  .profit-container-labels button {
+    border: 1px solid rgba(209, 35, 35, 0.3);
+  }
+}
+
+.profit.credits {
+  background: #13130e;
+
+  .profit-container {
+    background: radial-gradient(
+        circle at 80% 50%,
+        rgba(95, 85, 0, 0.7) 0%,
+        rgba(12, 15, 12, 0) 100%
+      ),
+      #0f0c0c;
+  }
+  .profit-container_buttons {
+    border-bottom: 1px solid rgba(158, 161, 26, 0.3);
+  }
+  .profit-container_buttons-item {
+    border-right: 1px solid rgba(158, 161, 26, 0.3);
+  }
+  .profit-container_buttons-item.active {
+    background: rgba(158, 161, 26, 0.3);
+  }
+  .block {
+    border: 1px solid rgba(195, 209, 35, 0.3);
+  }
+  .block p:first-child {
+    color: #9ea11a;
+  }
+  .block input[type="text"]:first-child {
+    border-bottom: 1px solid #c3d123;
+    color: #c3d123;
+  }
+
+  .block.credits input[type="text"]::-webkit-input-placeholder {
+    color: rgba(195, 209, 35, 0.3);
+  }
+  .profit-container-labels button {
+    border: 1px solid rgba(195, 209, 35, 0.3);
+  }
+}
+
+.profit.deposit {
+  background: #0e1113;
+
+  .profit-container {
+    background: radial-gradient(
+        circle at 80% 50%,
+        rgba(26, 88, 161, 0.7) 0%,
+        rgba(12, 15, 12, 0) 100%
+      ),
+      #0f0c0c;
+  }
+  .profit-container_buttons {
+    border-bottom: 1px solid rgba(35, 147, 209, 0.3);
+  }
+  .profit-container_buttons-item {
+    border-right: 1px solid rgba(35, 147, 209, 0.3);
+  }
+  .profit-container_buttons-item.active {
+    background: rgba(26, 88, 161, 0.3);
+  }
+  .block {
+    border: 1px solid rgba(35, 147, 209, 0.3);
+  }
+  .block p:first-child {
+    color: #2393d1;
+  }
+  .block input[type="text"]:first-child {
+    border-bottom: 1px solid #2393d1;
+    color: #2393d1;
+  }
+
+  .block input[type="text"]::-webkit-input-placeholder {
+    color: rgba(35, 147, 209, 0.3);
+  }
+  .profit-container-labels button {
+    border: 1px solid rgba(35, 147, 209, 0.3);
+  }
+}
+
+.profit-wrapper {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 73px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.profit-wrapper h2 {
+  font-family: var(--font-mont);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+  margin-bottom: 24px;
+  max-width: 1392px;
+  width: calc(100% - 100px);
+  text-align: start;
+}
+
+.profit-container {
+  border-radius: 24px;
+  max-width: 1392px;
+  width: calc(100% - 100px);
+  min-height: 705px;
+
+  background: radial-gradient(
+      circle at 80% 50%,
+      rgba(0, 95, 26, 0.7) 0%,
+      rgba(12, 15, 12, 0) 100%
+    ),
+    #0f0c0c;
+}
+
+.profit-container_buttons {
+  display: flex;
+  flex-direction: row;
+
+  border-bottom: 1px solid rgba(35, 209, 84, 0.3);
+  align-items: center;
+}
+
+.profit-container_buttons-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  height: 72px;
+  cursor: pointer;
+  border-right: 1px solid rgba(35, 209, 84, 0.3);
+}
+
+.profit-container_buttons-item:first-child {
+  border-radius: 24px 0 0 0;
+}
+
+.profit-container_buttons-item.active {
+  background: rgba(26, 161, 64, 0.3);
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.profit-container_buttons-item p {
+  font-family: var(--font-mont);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.profit-container-labels {
+  margin-top: 42px;
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 1.5fr 1fr 0.5fr;
+  grid-gap: 10px;
+  width: 100%;
+}
+.profit-container-labels.credits,
+.profit-container-labels.deposit {
+  grid-template-columns: 0.25fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+.profit-container-labels.credits2,
+.profit-container-labels.deposit2 {
+  grid-template-columns: 0.25fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.25fr;
+}
+.profit-container-labels button {
+  all: unset;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 130px;
+  padding: 0 12px;
+  width: 100%;
+  cursor: pointer;
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  background: rgba(12, 15, 12, 0.1);
+  border: 1px solid rgba(35, 209, 84, 0.3);
+  border-radius: 12px;
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+
+.profit-container-labels p {
+  font-family: var(--font-mont);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.profit-container-blocks {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 16px;
+  padding: 0 24px;
+  height: 519px;
+  overflow-y: auto;
+}
+
+.profit-container-blocks::-webkit-scrollbar {
+  background: #0e130f;
+  border-radius: 12px;
+  width: 8px;
+}
+
+.profit-container-blocks::-webkit-scrollbar-thumb {
+  background: #060b06;
+  border-radius: 12px;
+}
+
+.block {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 1.5fr 1fr 0.5fr;
+  grid-gap: 10px;
+  width: 100%;
+  align-items: center;
+  min-height: 72px;
+  height: 100%;
+  max-height: 72px;
+  background: rgba(12, 15, 12, 0.1);
+  border: 1px solid rgba(35, 209, 84, 0.3);
+  border-radius: 12px;
+  padding: 0 24px;
+  margin-bottom: 16px;
+}
+.block.credits,
+.block.deposit {
+  grid-template-columns: 0.25fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+.block.credits2,
+.block.deposit2 {
+  grid-template-columns: 0.25fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.25fr;
+}
+.block p:first-child {
+  color: #23d154;
+}
+
+.block p {
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  word-break: break-all;
+}
+.block p:nth-child(1) {
+  min-width: 60px;
+  word-break: normal;
+}
+
+.block p:nth-child(2) {
+  min-width: 120px;
+  word-break: normal;
+}
+.block p:nth-child(3) {
+  max-height: 72px;
+  overflow-y: auto;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.buttons img {
+  cursor: pointer;
+}
+
+/* ----------------- DROPDOWN ------------------------ */
+
+.category {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.category button {
+  all: unset;
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #ffffff;
+  justify-self: flex-start;
+  align-self: flex-start;
+  width: 100%;
+  cursor: pointer;
+}
+
+.category-dropdown {
+  display: none;
+}
+
+.category-dropdown.open {
+  margin-top: 50px;
+  background: #0c0f0c;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  z-index: 55;
+  word-break: break-word;
+}
+
+.category-dropdown h6 {
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* ------------------------------------------------------- */
+
+.block input[type="text"]:first-child {
+  all: unset;
+  max-width: 80px;
+  border-bottom: 1px solid #23d154;
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #23d154;
+}
+
+input[type="date"],
+.block input[type="text"] {
+  all: unset;
+  border-bottom: 1px solid #ffffff;
+  max-width: 264px;
+  width: 100%;
+  font-family: var(--font-mont);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+input[type="date"] {
+  max-width: 150px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* Invert the color to white */
+  cursor: pointer;
+}
+
+.addIcon {
+  justify-self: flex-end;
+  cursor: pointer;
+}
+.spend-block2 {
+  max-width: 1392px;
+  width: 100%;
+  position: relative;
+  padding: 26px 28px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.date-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  max-width: 400px;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.profit-wrapper h3 {
+  font-family: var(--font-mont);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1280px) {
+  .profit-container-labels button {
+    padding: 0;
+    width: auto;
+    height: auto;
+    border: none;
+  }
+  .profit.loss {
+    .profit-container-labels button {
+      padding: 0;
+      width: auto;
+      height: auto;
+      border: none;
+    }
+  }
+  .profit.credits {
+    .profit-container-labels button {
+      padding: 0;
+      width: auto;
+      height: auto;
+      border: none;
+    }
+  }
+  .profit.deposit {
+    .profit-container-labels button {
+      padding: 0;
+      width: auto;
+      height: auto;
+      border: none;
+    }
+  }
+  .profit-container-labels button p {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .profit-wrapper {
+    margin-top: 24px;
+  }
+
+  .block.credits,
+  .block.deposit {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    max-height: 320px;
+  }
+  .spend-block2 {
+    background: linear-gradient(
+        360deg,
+        rgba(12, 15, 12, 0) 0%,
+        rgba(0, 95, 26, 0.5) 30.39%,
+        rgba(12, 15, 12, 0) 80.02%
+      ),
+      #0c0f0c;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+  }
+  .profit.loss {
+    .spend-block2 {
+      background: linear-gradient(
+          360deg,
+          rgba(12, 15, 12, 0) 0%,
+          rgba(95, 0, 0, 0.7) 30.39%,
+          rgba(12, 15, 12, 0) 80.02%
+        ),
+        #0f0c0c;
+    }
+  }
+  .block {
+    height: 100%;
+    padding: 12px 24px;
+  }
+  .profit-container-labels button {
+    align-self: flex-start;
+    justify-self: flex-start;
+  }
+  .buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profit-wrapper h3 {
+    text-align: center;
+  }
+  .profit-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .profit {
+    height: 100%;
+    padding-bottom: 0;
+    min-height: 100vh;
+  }
+  .profit-wrapper {
+    padding: 0;
+  }
+  .profit-wrapper h2 {
+    padding: 0 20px;
+  }
+  .profit-container {
+    border-radius: 0;
+
+    height: 100%;
+  }
+  .profit-container_buttons-item:first-child {
+    border-radius: 0;
+  }
+
+  .profit-container-labels p {
+    display: none;
+  }
+
+  .block {
+    grid-template-columns: 2fr;
+    grid-template-rows: auto;
+    grid-row-gap: 20px;
+    max-height: 320px;
+  }
+
+  .profit-container-labels button {
+    all: unset;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 130px;
+    padding: 0 12px;
+    width: 100%;
+    cursor: pointer;
+    font-family: var(--font-mont);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+
+    background: rgba(12, 15, 12, 0.1);
+    border: 1px solid rgba(35, 209, 84, 0.3);
+    border-radius: 12px;
+
+    align-self: flex-end;
+    justify-self: flex-end;
+  }
+  /* ------------------- */
+  .profit.loss {
+    .profit-container-labels button {
+      all: unset;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 130px;
+      padding: 0 12px;
+      width: 100%;
+      cursor: pointer;
+      font-family: var(--font-mont);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #ffffff;
+
+      background: rgba(12, 15, 12, 0.1);
+      border: 1px solid rgba(209, 35, 35, 0.3);
+      border-radius: 12px;
+
+      align-self: flex-end;
+      justify-self: flex-end;
+    }
+  }
+  .profit.credits {
+    .profit-container-labels button {
+      all: unset;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 130px;
+      padding: 0 12px;
+      width: 100%;
+      cursor: pointer;
+      font-family: var(--font-mont);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #ffffff;
+
+      background: rgba(12, 15, 12, 0.1);
+      border: 1px solid rgba(195, 209, 35, 0.3);
+      border-radius: 12px;
+
+      align-self: flex-end;
+      justify-self: flex-end;
+    }
+  }
+  .profit.deposit {
+    .profit-container-labels button {
+      all: unset;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 130px;
+      padding: 0 12px;
+      width: 100%;
+      cursor: pointer;
+      font-family: var(--font-mont);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #ffffff;
+
+      background: rgba(12, 15, 12, 0.1);
+      border: 1px solid rgba(35, 147, 209, 0.3);
+      border-radius: 12px;
+
+      align-self: flex-end;
+      justify-self: flex-end;
+    }
+  }
+  /* ------------------- */
+  .profit-container-labels button p {
+    display: flex;
+  }
+  .buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+  }
+
+  .profit-container-blocks {
+    min-height: 100vh;
+    height: 100%;
+    overflow-y: hidden;
+  }
+  .date-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.block.credits input[type="text"],
+.block.deposit input[type="text"] {
+  max-width: 150px;
+}
+.block.credits input[type="text"]:first-child,
+.block.deposit input[type="text"]:first-child {
+  max-width: 80px;
+}
